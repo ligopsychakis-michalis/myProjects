@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Of MeMories</title>
+    <link rel="stylesheet" href="memory.css" type="text/css">
+</head>
+<body>
+    <div class="game">
+        <div class="score">
+            <p class="high-score">High-Score</p>
+            <p class="round">Round: 0</p>
+            <p class="instructions fade-in">Watch the path and follow by <span class="letter">M</span>eMory..!</p>
+        </div>
+        <section class="winner">
+            <h1>You Win!</h1>
+            <button class="btn-next">next round</button>
+        </section>
+        <h1 class="game-name fade-in"><span id="block-name"><span class="letter">B</span>lock</span> <br> <span class="letter">O</span>f <br> <span id="memories-name"><span class="letter">M</span>eMories</span></h1>
+        <button class="btn-play">Play</button>
+        <!-- 30 memory blocks -->
+        <div class="blocks-container">
+            <div class="blocks-5">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>    
+            <div class="blocks-5">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+            <div class="blocks-5">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+            <div class="blocks-5">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+            <div class="blocks-5">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+            <div class="blocks-5">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <section class="loser"> 
+            <h1>You Lose..</h1>
+        </section>    
+    </div>
+    <!-- background music -->
+    <audio>
+        <source src="Relax 1 min - Sunset, Ocean, Moon - Relaxing Music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="memory.js"></script>
+</body>
+</html>

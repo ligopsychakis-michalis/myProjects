@@ -1,0 +1,170 @@
+body{
+    font-family: fantasy, cursive, serif;
+    font-size: 1.5em;
+    background-color: #5f9ea0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+/* style for the intro of game */
+.game{
+    text-align: center;
+    margin-top:8vh;
+    letter-spacing: 2px;
+}
+
+.high-score{
+    margin-bottom: -10px;
+}
+
+.game-name{
+    margin-top: 15vh;
+}
+
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: 2s;
+}
+@keyframes fade-in{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.btn-play{
+    background-color: #5f9ea0;
+    border: none;
+    outline: none;
+    margin-top: 10vh;
+    font-size: 1.5em;
+    font-family: fantasy, cursive, serif;
+    cursor: pointer;
+}
+
+.btn-play:hover{
+    color: #faebd7;
+}
+
+#block-name{
+    margin-right: 42px;
+}
+
+#memories-name{
+    margin-left: 24px;
+}
+
+.letter{
+    color: #faebd7;
+}
+
+/* animation for after the click of button 'play' */
+.fade-out{
+    animation-name:fade-out;
+    animation-duration: 1s;
+}
+@keyframes fade-out{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.instructions{
+    display: none;
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
+
+
+/* style for memory blocks */
+.block{
+    width: 70px;
+    height: 80px;
+    background-color: #faebd7;
+    box-shadow: 0px 2px 4px 0px;
+    border-radius: 10px;
+    margin: 6px;
+}
+
+.blocks-container{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    display: none;
+}
+
+.blocks-5{
+    display: flex;
+}
+
+/* animation to show the path of memory */
+.chosen-block{
+    animation-name: chosen-block;
+    animation-duration: 4s;
+}
+@keyframes chosen-block{
+    0% {background-color: #faebd7;}
+    50% {background-color: #47423c;}
+    100% {background-color: #faebd7;}
+}
+
+
+/* style for winner case */
+.winner{
+    display: none;
+} 
+.winner h1{
+    margin: 0;
+}
+
+.btn-next{
+    background-color: #5f9ea0;
+    outline: none;
+    border: none;
+    font-family: fantasy;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.btn-next:hover{
+    color:#faebd7;
+}
+
+
+/* style for loser case */
+.loser{
+    display: none;
+    margin-top: 30vh;
+}
+
+
+/* style for high-scorer case */
+.high-scorer{
+    display: none;
+}
+
+/* responsive */
+@media all and (max-width: 419px){
+    body{
+        font-size: 1.1em;
+    }
+    .game{
+        margin-top: 0vh;
+    }
+    .game-name{
+        margin-top: 12vh;
+    }
+    .btn-play{
+        margin-top: 6vh;
+    }
+    .block{
+        width: 16vw;
+        height: 10vh;
+        margin: 4px;
+    }
+    .blocks-container{
+        margin-top: -2vh;
+    }
+}
