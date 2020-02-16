@@ -36,6 +36,7 @@ function mainPage(){
             highScore.style.display = 'none';
             gameName.style.display = 'none';
             btnPlay.style.display = 'none';
+            document.querySelector('.game').style.marginTop = '0';
             score.classList.remove('fade-out');
             gameName.classList.remove('fade-out');
             btnPlay.classList.remove('fade-out');
@@ -156,6 +157,7 @@ function userLoser(){
             round.style.fontSize = '1em';
             round.style.fontWeight = '400';
             instructions.style.display = 'none'
+            document.querySelector('.game').style.marginTop = '10vh';
             score.style.display = 'block';
             gameName.style.display = 'block';
             btnPlay.style.display = 'inline-block';
