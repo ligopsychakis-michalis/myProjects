@@ -21,7 +21,7 @@ for (let i = 0; i < 30; i++){
 
 function mainPage(){
     if(localStorage.getItem('round')){
-        round.innerHTML = `Round: ${JSON.parse(localStorage.getItem('round'))}`;
+        round.innerHTML = `Round: ${(localStorage.getItem('round'))}`;
     };    
 
     //Event: onclick button 'Play', start the music, show the game table and begin the game
@@ -161,9 +161,9 @@ function userLoser(){
             btnPlay.style.display = 'inline-block';
             //keep bestscore
             if (!localStorage.getItem('round')){
-                localStorage.setItem('round', JSON.stringify(roundNum - 1));
+                localStorage.setItem('round', roundNum - 1);
             }else if (JSON.parse(localStorage.getItem('round')) < roundNum - 1){
-                localStorage.setItem('round', JSON.stringify(roundNum - 1));
+                localStorage.setItem('round', roundNum - 1);
             };
             //call the main page to start from round 1
             roundNum = 1;
