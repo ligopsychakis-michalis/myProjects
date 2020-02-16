@@ -20,7 +20,9 @@ for (let i = 0; i < 30; i++){
 }
 
 function mainPage(){
-    round.innerHTML = `Round: ${JSON.parse(localStorage.getItem('round'))}`;
+    if(localStorage.getItem('round')){
+        round.innerHTML = `Round: ${JSON.parse(localStorage.getItem('round'))}`;
+    };    
 
     //Event: onclick button 'Play', start the music, show the game table and begin the game
     btnPlay.addEventListener('click', () => { 
