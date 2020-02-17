@@ -148,7 +148,7 @@ body{
 /* responsive */
 @media all and (max-width: 419px){
     body{
-        font-size: 1.1em;
+        font-size: 1.25em;
     }
     .game{
         margin-top: 10vh;
@@ -163,8 +163,5 @@ body{
         width: 16vw;
         height: 10vh;
         margin: 4px;
-    }
-    .blocks-container{
-        margin-top: -2vh;
     }
 }
