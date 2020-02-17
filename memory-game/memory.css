@@ -73,7 +73,7 @@ body{
 .instructions{
     display: none;
     margin-top: -25px;
-    margin-bottom: 25px;
+    margin-bottom: 5vh;
 }
 
 
@@ -91,7 +91,6 @@ body{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4vh;
     display: none;
 }
 
@@ -116,20 +115,23 @@ body{
     display: none;
 } 
 .winner h1{
-    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 .btn-next{
-    background-color: #5f9ea0;
+    background-color: #f7f2ec;
+    border-radius: 10px;
+    padding: 9px;
     outline: none;
     border: none;
     font-family: fantasy;
     font-size: 1em;
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: 5vh;
 }
 .btn-next:hover{
-    color:#faebd7;
+    background-color: #dad6d1;
 }
 
 
@@ -158,6 +160,9 @@ body{
     }
     .btn-play{
         margin-top: 12vh;
+    }
+    .instructions{
+        margin-bottom: 2vh;
     }
     .block{
         width: 16vw;
