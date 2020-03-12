@@ -67,19 +67,19 @@
     <script>
       for (let i = 0; i < 7; i++){
         document.querySelectorAll(".game")[i].addEventListener("mouseover", () => {
-          document.querySelectorAll(".play-button")[i].style.display = "block";
+          document.querySelectorAll(".play-button")[i].style.visibility = "visible";
         });
 
         document.querySelectorAll(".play-button")[i].addEventListener("mouseover", () => {
-          document.querySelectorAll(".play-button")[i].style.display = "block";
+          document.querySelectorAll(".play-button")[i].style.visibility = "visible";
         });
 
         document.querySelectorAll(".game")[i].addEventListener("mouseout", () => {
-          document.querySelectorAll(".play-button")[i].style.display = "none";
+          document.querySelectorAll(".play-button")[i].style.visibility = "hidden";
         });
 
         document.querySelectorAll(".play-button")[i].addEventListener("mouseout", () => {
-          document.querySelectorAll(".play-button")[i].style.display = "none";
+          document.querySelectorAll(".play-button")[i].style.visibility = "hidden";
         });
       };  
     </script>
