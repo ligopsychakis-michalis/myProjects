@@ -12,7 +12,7 @@ window.onload = () => {
 
     //listener for clicking "back" button
     document.querySelector(".back").addEventListener("click", () => {
-        window.location.pathname = "https://ligopsychakis-michalis.github.io/myProjects/mentor2/";
+        window.location.pathname = "myProjects/mentor2/";
     });
 
     //display the flag and infos about this country
