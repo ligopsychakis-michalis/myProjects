@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+    <nav>
+        <h2>Where in the world?</h2>
+        <div id="dark"><i class="fas fa-moon"></i> Dark Mode</div>
+    </nav>
+    <form>
+        <div>
+            <i class="fas fa-search"></i>
+            <datalist id="searching"></datalist>
+            <input class="search" list="searching" type="text" placeholder="Search for a country..">
+        </div>
+        <div>
+            <datalist id="regions">
+                <option value="Africa"></option>
+                <option value="Americas"></option>
+                <option value="Asia"></option>
+                <option value="Europe"></option>
+                <option value="Oceania"></option>
+            </datalist>
+            <input class="region" list="regions" type="text" placeholder="Filter by Region">
+        </div>    
+    </form>
+    <main></main>
+    <footer>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://www.linkedin.com/in/michalis-ligopsychakis-517621164/" target="_blank">Michalis Ligopsychakis</a>.
+        </p>
+      </footer>
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/a35f8701c8.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
