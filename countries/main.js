@@ -100,7 +100,7 @@ window.onload = () => {
             if (e.target.classList.contains("infos") || e.target.tagName == "IMG"){
                 const countryObject = JSON.stringify(data.find(country => country.name == e.target.alt));
                 localStorage.setItem("countryObject", countryObject);
-                window.location.pathname = "myProjects/mentor2/details/details.html";
+                window.location.pathname = "myProjects/countries/details/details.html";
             };
         });
     }    

@@ -12,7 +12,7 @@ window.onload = () => {
 
     //listener for clicking "back" button
     document.querySelector(".back").addEventListener("click", () => {
-        window.location.pathname = "myProjects/mentor2/";
+        window.location.pathname = "myProjects/countries/";
     });
 
     //display the flag and infos about this country
