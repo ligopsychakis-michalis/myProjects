@@ -1,0 +1,26 @@
+// colors
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+$red: hsl(0, 87%, 67%);
+$gray: hsl(0, 0%, 75%);
+$grayish-violet: hsl(257, 7%, 63%);
+$dark-blue: hsl(255, 11%, 22%);
+$dark-violet: hsl(260, 8%, 14%);
+
+//font-family
+$poppins: 'Poppins', sans-serif;
+
+//mixin for buttons
+@mixin btn {
+    border: none;
+    outline: none;
+    background-color: $cyan;
+    padding: 5px 22px;
+    border-radius: 28px;
+    color: white;
+
+    &:hover{ 
+        color: white; 
+        opacity: 0.7;
+    }
+}
