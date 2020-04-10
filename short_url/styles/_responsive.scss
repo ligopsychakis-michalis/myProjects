@@ -139,12 +139,15 @@
             }
         }
     }
+
+    .short-links{
+        width: 95%;
+        form{ 
+            padding: 20px 5px; 
+            input{ overflow-x: scroll; }
+        }
+    }
 }
 
 
-@media all and (max-width: 305px){
-    .short-links{
-        width: 95%;
-        form{ padding: 20px 5px; }
-    }
-}    
+   
