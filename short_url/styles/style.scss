@@ -1,5 +1,7 @@
 @import 'utilities';
 
+html{ overflow-x: hidden; }
+
 body{
     font-family: $poppins;
     font-size: 18px;
@@ -7,7 +9,12 @@ body{
 
 @import 'nav';
 @import 'header';
+@import 'main';
+@import 'short-link';
+@import 'footer';
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }   
+.attribution { font-size: 13px; text-align: center; margin-top: 5px; }
+.attribution a { color: #5e30c7; }   
+
+@import 'responsive';

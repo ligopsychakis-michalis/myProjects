@@ -1,0 +1,49 @@
+footer{
+    font-size: 14px;
+    padding: 45px 7.5% 55px 7.5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $dark-violet;
+    margin: 0 -10px;
+
+    h1,h4{ 
+        color: white; 
+        letter-spacing: 0.5px;
+        margin: 0;
+    }
+    h4{ margin-bottom: 10px; }
+    h1{ margin-top: -10px; }
+
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li{ 
+            margin-top: 5px; 
+        }
+
+        a{
+            text-decoration: none;
+            color: $grayish-violet;
+            &:hover{ color:$cyan; }
+        }
+    }
+
+    div{
+        &:first-child{ flex:1; }
+
+        &:last-child{
+            i{ 
+                color: white;
+                cursor: pointer;
+                margin-right: 10px;  
+                &:hover{ color:$cyan; } 
+            }
+            i:last-child{ margin-right: 0; } 
+        }
+    }    
+
+    session{ margin-right: 10vw; }
+}

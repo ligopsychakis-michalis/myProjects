@@ -1,4 +1,4 @@
-nav{
+.desktop-nav{
     width: 85%;
     margin: auto;
 
@@ -14,6 +14,10 @@ nav{
         li{
             margin: 15px 35px 15px 0;
 
+            .fas,.far{
+                color: #adacac;
+            }
+
             a{
                 text-decoration: none;
                 color: $grayish-violet;
@@ -22,9 +26,10 @@ nav{
                 &:hover{ color: black; }
             }
 
+            &:nth-child(7){ display: none; }
             &:first-child{ margin: 15px 50px 15px 0; }
             &:nth-child(4){ flex: 1; }
-            &:last-child{ 
+            &:nth-child(6){ 
                 @include btn;
                 margin: 10px 0 20px 0;
                 
@@ -38,4 +43,45 @@ nav{
             }
         }
     }
+}
+
+
+
+// mobile navigation
+.mobile-nav{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 85vw;
+    margin-left: 6vw;
+    text-align: center;
+
+    ul{
+        padding: 25px 0 33px 0;
+        margin: auto;
+        width: 85vw;
+        list-style-type: none;
+        background-color: $violet;
+        border-radius: 10px;
+
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{ color: cyan; }
+        }
+
+        li{ 
+            margin:5px 0;
+            padding: 5px; 
+            &:last-child{ 
+                @include btn; 
+                width: 25%;
+                margin: auto;
+                & a:hover{ color: white; }
+            }
+        }
+
+        hr{ width: 85%; }
+    }
+
 }

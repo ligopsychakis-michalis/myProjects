@@ -1,0 +1,28 @@
+.short-links{
+    .short-link{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+
+        li:nth-child(2),li:nth-child(3){ margin-right: 40px; }
+        li:nth-child(2){ margin-left: auto; }
+
+        a{
+            text-decoration: none;
+            color: $cyan;
+            &:hover{ text-decoration: underline; }
+        }
+
+        button{ 
+            @include btn; 
+            font-size: 0.8em;
+            border-radius: 5px;
+        }
+
+        i{ color: #adacac; }
+
+    }
+}

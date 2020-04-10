@@ -1,0 +1,32 @@
+header{
+    display: flex;
+    width: 85% + 7.5%;
+    margin-top: 12vh;
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: space-between;
+
+    div{
+        margin-top: 20px;
+        max-width: 500px;
+
+        h1{
+            margin-bottom: 0;
+            font-size: 3.3em;
+            line-height: 1.3em;
+        }
+
+        p{
+            margin-top: 5px;
+            color: $grayish-violet;
+        }
+
+        button{
+            @include btn;
+            font-size: 1em;
+            padding: 10px 30px;
+        }
+    }
+
+    figure{ margin-right: -100px; }
+}
