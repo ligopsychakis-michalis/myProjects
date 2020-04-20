@@ -1,0 +1,53 @@
+$StrongCyan: hsl(171, 66%, 44%);
+$StrongCyanBorder: hsl(171, 66%, 34%);
+$LightBlue: hsl(233, 100%, 69%);
+$LightBlueBorder: hsl(233, 100%, 59%);
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+$fontFamily: 'Bai Jamjuree', sans-serif;
+
+@mixin btn($color1,$color2) {
+    font-family: $fontFamily;
+    font-size: 1em;
+    background-color: $color1;
+    color: white;
+    padding: 17px 33px;
+    border-radius: 35px;
+    border: solid 0px $color1;
+    border-bottom: solid 4px $color2;
+    box-shadow: 0px 1px 20px 0px #bcbcbc;
+    outline: none;
+    &:hover{ 
+        opacity: 0.8; 
+        cursor: pointer;
+    }
+}
+
+
+body{
+    font-size: 18px;
+    font-family: $fontFamily;
+    overflow-x: hidden;
+    text-align: center;
+    margin: 0;
+}
+
+h1,h2,h3{ 
+    color: $DarkGrayishBlue;  
+    margin-bottom: 0;
+}
+h1{ font-size: 2.1em; }
+h2{ font-size: 1.6em; }
+h3{ font-size: 1.27em; }
+
+p{ 
+    color: $GrayishBlue; 
+    line-height: 1.5em;
+    letter-spacing: 0.02em;
+    margin: 0.7em 0;
+}
+
+
+@import 'header';
+@import 'main';
+@import 'footer';
