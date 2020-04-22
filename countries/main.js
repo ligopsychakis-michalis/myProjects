@@ -1,14 +1,14 @@
 window.onload = () => {
     //set the mode (dark or not)..
-    if (localStorage.getItem("dark-mode")){
-        if (localStorage.getItem("dark-mode") == "false"){
-            localStorage.setItem("dark-mode","true");
+    if (sessionStorage.getItem("dark-mode")){
+        if (sessionStorage.getItem("dark-mode") == "false"){
+            sessionStorage.setItem("dark-mode","true");
         }else{
-            localStorage.setItem("dark-mode","false");
+            sessionStorage.setItem("dark-mode","false");
         }
         performModeState();
     }else{
-        localStorage.setItem("dark-mode","false");
+        sessionStorage.setItem("dark-mode","false");
     };
 
     let firstRender = true;
@@ -54,7 +54,7 @@ window.onload = () => {
                 main.appendChild(card);
             });
             //perform the state of card because on the reload it's not performing 
-            if (localStorage.getItem("dark-mode") == "true"){
+            if (sessionStorage.getItem("dark-mode") == "true"){
                 for (let i = 0; i < document.querySelectorAll(".card").length; i++){
                     document.querySelectorAll(".card")[i].classList.add("dark-mode");
                 };
@@ -99,7 +99,7 @@ window.onload = () => {
         document.querySelector("main").addEventListener("click", (e) => {
             if (e.target.classList.contains("infos") || e.target.tagName == "IMG"){
                 const countryObject = JSON.stringify(data.find(country => country.name == e.target.alt));
-                localStorage.setItem("countryObject", countryObject);
+                sessionStorage.setItem("countryObject", countryObject);
                 window.location.pathname = "myProjects/countries/details/details.html";
             };
         });
@@ -114,7 +114,7 @@ window.onload = () => {
 
     //function to perform dark mode or not..
     function performModeState(){
-        if (localStorage.getItem("dark-mode") == "false"){
+        if (sessionStorage.getItem("dark-mode") == "false"){
             document.body.classList.add("body-dark-mode");
             document.querySelector("nav").classList.add("dark-mode");
             for (let i = 0; i < document.querySelectorAll("input").length; i++){
@@ -123,7 +123,7 @@ window.onload = () => {
             for (let i = 0; i < document.querySelectorAll(".card").length; i++){
                 document.querySelectorAll(".card")[i].classList.add("dark-mode");
             };
-            localStorage.setItem("dark-mode","true");
+            sessionStorage.setItem("dark-mode","true");
         }else{
             document.body.classList.remove("body-dark-mode");
             document.querySelector("nav").classList.remove("dark-mode");
@@ -133,7 +133,7 @@ window.onload = () => {
             for (let i = 0; i < document.querySelectorAll(".card").length; i++){
                 document.querySelectorAll(".card")[i].classList.remove("dark-mode");
             };
-            localStorage.setItem("dark-mode","false");
+            sessionStorage.setItem("dark-mode","false");
         };
     };
 

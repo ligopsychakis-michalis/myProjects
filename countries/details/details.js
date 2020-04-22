@@ -1,14 +1,14 @@
 window.onload = () => {
     //set the mode (dark or not)..
-    if (localStorage.getItem("dark-mode") == "false"){
-        localStorage.setItem("dark-mode","true");
+    if (sessionStorage.getItem("dark-mode") == "false"){
+        sessionStorage.setItem("dark-mode","true");
     }else{
-        localStorage.setItem("dark-mode","false");
+        sessionStorage.setItem("dark-mode","false");
     }
     performModeState();
 
     //catch the country that user wants to see
-    const country = JSON.parse(localStorage.getItem("countryObject"));
+    const country = JSON.parse(sessionStorage.getItem("countryObject"));
 
     //listener for clicking "back" button
     document.querySelector(".back").addEventListener("click", () => {
@@ -55,7 +55,7 @@ window.onload = () => {
 
     //function to perform dark mode or not..
     function performModeState(){
-        if (localStorage.getItem("dark-mode") == "false"){
+        if (sessionStorage.getItem("dark-mode") == "false"){
             document.body.classList.add("body-dark-mode");
             document.querySelector("nav").classList.add("dark-mode");
             document.querySelector(".back").classList.add("dark-mode");
@@ -63,7 +63,7 @@ window.onload = () => {
                 document.querySelectorAll(".borders button")[i].classList.add("dark-mode");
                 console.log("hi");
             };
-            localStorage.setItem("dark-mode","true");
+            sessionStorage.setItem("dark-mode","true");
         }else{
             document.body.classList.remove("body-dark-mode");
             document.querySelector("nav").classList.remove("dark-mode");
@@ -71,7 +71,7 @@ window.onload = () => {
             for (let i = 0; i < document.querySelectorAll(".btn-details").length; i++){
                 document.querySelectorAll(".btn-details")[i].classList.remove("dark-mode");
             };
-            localStorage.setItem("dark-mode","false");
+            sessionStorage.setItem("dark-mode","false");
         };
     };
 
@@ -96,7 +96,7 @@ window.onload = () => {
             infos.innerHTML += `<p class="borders">Border Countries: ${buttons}</p>`;
 
             //perform the state of card because on the reload it's not performing 
-            if (localStorage.getItem("dark-mode") == "true"){
+            if (sessionStorage.getItem("dark-mode") == "true"){
                 for (let i = 0; i < document.querySelectorAll(".btn-details").length; i++){
                     document.querySelectorAll(".btn-details")[i].classList.add("dark-mode");
                 };
@@ -119,7 +119,7 @@ window.onload = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
-                        localStorage.setItem("countryObject", JSON.stringify(data[0]));
+                        sessionStorage.setItem("countryObject", JSON.stringify(data[0]));
                         location.reload();
                     });     
             });
