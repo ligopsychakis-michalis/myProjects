@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google Map</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+            color: #b8b8b8;
+            letter-spacing: 0.05em;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        #map{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container{
+            display: flex;
+            position: absolute;
+            width: 100%;
+            top: 35%;
+            justify-content: center;
+        }
+
+        /* the loader */
+        .lds-ripple {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+        .lds-ripple div {
+            position: absolute;
+            border: 4px solid #fff;
+            opacity: 1;
+            border-radius: 50%;
+            animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        .lds-ripple div:nth-child(2) {
+            animation-delay: -0.5s;
+        }
+        @keyframes lds-ripple {
+            0% {
+                top: 36px;
+                left: 36px;
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                top: 0px;
+                left: 0px;
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Google Map</h1>
+    <div class="container">
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+    <div id="map"></div>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbIDam4o_EMmstdyynx_53ljJW8oTR1kU&callback=initMap"async defer></script>
+<script src="./map.js"></script>
+</html>
