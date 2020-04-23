@@ -2,7 +2,7 @@ function initMap() {
 
     navigator.geolocation.watchPosition(position => {
         //get user's position
-        const latLon = {
+        let latLon = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
         };
@@ -13,8 +13,10 @@ function initMap() {
             zoom: 8
         });
 
-        //store user's choice
-        let userChoice;
+        //store markers
+        let markers = [];
+        //initialize the move of user
+        let changeUserPosition = false;
 
         //show basic markers to the map
         createMarker(latLon, "<h4>You are here!</h4>", "https://cdn2.iconfinder.com/data/icons/flat-and-simple-part-2/128/user_location-512.png");
@@ -25,11 +27,29 @@ function initMap() {
         let firstClick = true;
         google.maps.event.addListener(map, "click", (e) => {
             if (!firstClick){
-                userChoice.setMap(null);
+                markers[markers.length - 1].setMap(null);
+                markers.pop();
             };
             createMarker(e.latLng, "<h4>Your choice..</h4>");
             firstClick = false;
         });
+
+
+        //every 3sec follow position of user
+        setInterval(() => {
+            if (latLon.lat !== position.coords.latitude || latLon.lng !== position.coords.longitude){
+                latLon = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                console.log(latLon);
+                markers[0].setMap(null);
+                markers.shift();
+                changeUserPosition = true;
+                createMarker(latLon, "<h4>You are here!</h4>", "https://cdn2.iconfinder.com/data/icons/flat-and-simple-part-2/128/user_location-512.png");
+            };
+        }, 3000);
 
 
         function createMarker(latLon,info,url){
@@ -61,7 +81,13 @@ function initMap() {
                 map.setCenter(marker.getPosition());
             });
 
-            userChoice = marker;
+            if (changeUserPosition == false){
+                markers.push(marker);
+            }else{
+                markers.unshift(marker);
+                changeUserPosition = false;
+            };
+            
         };
     });
 };
