@@ -17,8 +17,8 @@ function initMap() {
         let userChoice;
 
         //show basic markers to the map
-        createMarker(latLon, "<h2>You are here!</h2>", "https://cdn3.iconfinder.com/data/icons/maps-and-navigation-7/65/68-512.png");
-        createMarker({ lat: 37.983810, lng: 23.727539 }, "<h2>Here is Athens..</h2>", "https://cdn.iconscout.com/icon/premium/png-256-thumb/acropolis-of-athens-1-904393.png");
+        createMarker(latLon, "<h4>You are here!</h4>", "https://cdn2.iconfinder.com/data/icons/flat-and-simple-part-2/128/user_location-512.png");
+        createMarker({ lat: 37.983810, lng: 23.727539 }, "<h4>Here is Athens..</h4>", "https://cdn.iconscout.com/icon/premium/png-256-thumb/acropolis-of-athens-1-904393.png");
 
 
         //event to create a marker when click and delete the previous one
@@ -27,7 +27,7 @@ function initMap() {
             if (!firstClick){
                 userChoice.setMap(null);
             };
-            createMarker(e.latLng, "<h2>Your choice..</h2>");
+            createMarker(e.latLng, "<h4>Your choice..</h4>");
             firstClick = false;
         });
 
@@ -44,7 +44,7 @@ function initMap() {
                     position: latLon, 
                     icon:{
                         url: url,
-                        scaledSize: new google.maps.Size(50, 50)
+                        scaledSize: new google.maps.Size(60, 60)
                     },    
                     map: map
                 });
