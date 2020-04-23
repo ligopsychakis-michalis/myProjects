@@ -10,7 +10,7 @@ function initMap() {
         //generate the map
         let map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: latLon.lat, lng: latLon.lng },
-            zoom: 8
+            zoom: 2.7
         });
 
         //store markers
