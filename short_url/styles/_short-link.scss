@@ -6,9 +6,11 @@
         background-color: white;
         padding: 15px 25px;
         border-radius: 10px;
+        overflow: scroll;
 
         li:nth-child(2),li:nth-child(3){ margin-right: 40px; }
         li:nth-child(2){ margin-left: auto; }
+        li:nth-child(1){ margin-right: 10px; }
 
         a{
             text-decoration: none;
