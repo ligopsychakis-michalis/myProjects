@@ -4,7 +4,8 @@ body{
     font-family: 'Open Sans', sans-serif;
     background-image: url("../imgs/background.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    height: 100vh;
 }
 
 header{
@@ -84,32 +85,32 @@ main{
     }
 }
 
+// @media all and (max-width: 700px){
+//     main{
+//         width: 100%;
+//         .card{
+//             .front{
+//                 width: 100px;
+//                 height: 90px;
+//             }
+
+//             p{ 
+//                 width: 100px;
+//                 min-height: 38px; 
+//                 font-size: 0.9em;
+//                 padding: 3px 0;
+//             }
+
+//             .back{
+//                 width: 100px;
+//                 height: 133px;
+//                 margin-left: -100px;
+//             }
+//         }
+//     }
+// }
+
 @media all and (max-width: 700px){
-    main{
-        width: 100%;
-        .card{
-            .front{
-                width: 100px;
-                height: 90px;
-            }
-
-            p{ 
-                width: 100px;
-                min-height: 38px; 
-                font-size: 0.9em;
-                padding: 3px 0;
-            }
-
-            .back{
-                width: 100px;
-                height: 133px;
-                margin-left: -100px;
-            }
-        }
-    }
-}
-
-@media all and (max-width: 350px){
     header{
         button{ 
             padding: 10px 15px; 
