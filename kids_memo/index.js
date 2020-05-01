@@ -52,30 +52,27 @@ btn.addEventListener("click", () => {
 //event of clicking a card (check if two in a row are the same ? keep them open : close both)
 let canPlay = true;
 main.addEventListener("click", (e) =>{
-    if (canPlay == true){
+    if (canPlay === true && e.target.className === "back"){
         const insect = e.target.previousSibling.previousSibling;
         twoChoices.push(insect);
+        e.target.style.zIndex = -1;
+        insect.classList.add("fade-in");
+        setTimeout(() => {
+            insect.classList.remove("fade-in");
+        },500)
 
-        if(e.target.className === "back"){
-            e.target.style.zIndex = -1;
-            insect.classList.add("fade-in");
-            setTimeout(() => {
-                insect.classList.remove("fade-in");
-            },500)
-
-            if(twoChoices.length == 2 && twoChoices[0].src !== twoChoices[1].src){
-                canPlay = false;
-                setTimeout(()=> {
-                    e.target.style.zIndex = 0;
-                    twoChoices[0].nextSibling.nextSibling.style.zIndex = 0;
-                    twoChoices = [];
-                    canPlay = true;
-                } ,500);
-            }else if (twoChoices.length == 2 && twoChoices[0].src == twoChoices[1].src){
+        if(twoChoices.length == 2 && twoChoices[0].src !== twoChoices[1].src){
+            canPlay = false;
+            setTimeout(()=> {
+                e.target.style.zIndex = 0;
+                twoChoices[0].nextSibling.nextSibling.style.zIndex = 0;
                 twoChoices = [];
-            }
+                canPlay = true;
+            } ,500);
+        }else if (twoChoices.length == 2 && twoChoices[0].src == twoChoices[1].src){
+            twoChoices = [];
         };
-    }
+    };
 });
 
 
