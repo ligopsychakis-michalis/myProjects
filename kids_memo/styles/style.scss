@@ -21,7 +21,10 @@ header{
         cursor: pointer;
         padding: 25px 50px;
         font-family: 'Open Sans', sans-serif;
+        
         &:hover{ background-color: #7dde04; }
+        &:active{ transform: scale(0.98);  }
+
         span{ font-size: 1.7em; }
     }
 }
