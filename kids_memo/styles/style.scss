@@ -21,7 +21,7 @@ header{
         cursor: pointer;
         padding: 25px 50px;
         font-family: 'Open Sans', sans-serif;
-
+        &:hover{ background-color: #7dde04; }
         span{ font-size: 1.7em; }
     }
 }
@@ -36,7 +36,6 @@ main{
     .card{
         width: 25%;
         margin-bottom: 20px;
-        cursor: pointer;
 
         .front{
             width: 180px;
@@ -51,6 +50,7 @@ main{
             margin-left: -180px;
             border-radius: 4px;
             box-shadow: 0px 1px 10px 0px black;
+            cursor: pointer;
         }
 
         p{
@@ -59,7 +59,7 @@ main{
             width: 180px;
             margin: auto;
             margin-top: -6px;
-            padding: 10px 0;
+            padding: 13px 0;
             letter-spacing: 0.025em;
             border-radius: 0 0 4px 4px;
             word-spacing: -1px;

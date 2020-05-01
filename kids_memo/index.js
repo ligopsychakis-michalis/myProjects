@@ -68,7 +68,7 @@ main.addEventListener("click", (e) =>{
                 twoChoices[0].nextSibling.nextSibling.style.zIndex = 0;
                 twoChoices = [];
                 canPlay = true;
-            } ,500);
+            } ,700);
         }else if (twoChoices.length == 2 && twoChoices[0].src == twoChoices[1].src){
             twoChoices = [];
         };
