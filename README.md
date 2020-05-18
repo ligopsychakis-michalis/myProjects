@@ -2,6 +2,8 @@
 
 Memory_Game: https://ligopsychakis-michalis.github.io/myProjects/memory-game
 
+Tic_Tac_Toe: https://ligopsychakis-michalis.github.io/myProjects/tic-tac-toe
+
 My_Google_Map: https://ligopsychakis-michalis.github.io/myProjects/my_google_map
 
 Kids_Memo: https://ligopsychakis-michalis.github.io/myProjects/kids_memo
