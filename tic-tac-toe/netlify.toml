@@ -1,0 +1,2 @@
+base = "tic-tac-toe/"
+publish = "tic-tac-toe/build/"
