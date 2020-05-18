@@ -2,7 +2,7 @@
 
 Memory_Game: https://ligopsychakis-michalis.github.io/myProjects/memory-game
 
-Tic_Tac_Toe: https://ligopsychakis-michalis.github.io/myProjects/tic-tac-toe
+Tic_Tac_Toe: https://tic0tac0toe.netlify.app
 
 My_Google_Map: https://ligopsychakis-michalis.github.io/myProjects/my_google_map
 
