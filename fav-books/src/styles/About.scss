@@ -1,0 +1,53 @@
+.about{
+    position: relative;
+
+    .about-book{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-book-content{
+        width: 755px;
+        margin: auto;
+        margin-top: 130px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .about-text{
+        font-family: cursive;
+        font-size: 1.3em;
+        color: #2d2d2d;
+    }
+
+    img{ 
+        width: 900px;
+        position: absolute;
+        z-index: -1;
+        top: 60px;
+    }
+
+    .random-quotes{
+        margin-top: 10px;
+        
+        .quote{
+            max-width: 340px;
+            font-family: cursive;
+            font-size: 1.5em; 
+            display: flex;
+            flex-direction: column;  
+            height: 315px;
+            
+            small{ flex: 1; }
+            button{
+                font-size: 0.8em;
+                font-family: cursive;
+                outline: none;
+                cursor: pointer;
+                background: none;
+                border: none;
+            }
+        }
+    }
+    
+}

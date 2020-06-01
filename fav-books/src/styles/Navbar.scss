@@ -1,0 +1,79 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5%;
+    align-items: center;
+    background-color: #6495ed;
+    box-shadow: 0px 1px 8px 0px #2d2d2d;
+
+    .logo{ 
+        font-size: 2em;
+        color: #2d2d2d; 
+    }
+
+    i{ color: #faebd7; }
+
+    ul{ 
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li{ margin: 0 10px; }
+
+        a{ 
+            padding: 3px 8px;
+            text-decoration: none; 
+            color: #f1f1f1;
+            cursor: pointer;
+
+            &:hover{
+                color: #2d2d2d;
+                background-color: #faebd7;
+                border-radius: 5px;
+                transition: all 0.5s;
+
+                i{
+                    color: #6495ed;
+                    transition: color 1s;
+                }
+            }
+        }
+
+        &:first-of-type{
+            justify-content: space-between;
+            flex: 1;
+            max-width: 40vw;
+        }
+    }
+
+    // non home page
+    button{
+        font-size: 1em;
+        background-color: antiquewhite;
+        border-radius: 30px;
+        padding: 13px 30px;
+        border: 0px solid antiquewhite;
+        border-bottom: 3px solid lighten(#2d2d2d, 15%);
+        outline: none;
+        cursor: pointer;
+        &:hover{ opacity: 0.8; }
+
+        a{ 
+            text-decoration: none; 
+            color: #2d2d2d;
+        }
+        i{ color: #2d2d2d; }
+    }
+
+    .add-book{
+        background-color: #ec5656;
+        color: #faebd6;
+        &:hover{ 
+            opacity: 1; 
+            transform: scale(1.01)
+        }
+
+        i{ color: #6494ed; }
+    }
+}
