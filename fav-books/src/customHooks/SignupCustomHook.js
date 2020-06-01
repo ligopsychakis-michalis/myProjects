@@ -15,7 +15,7 @@ export default function useValidSignup(){
         if (username && email && password && confirm){
             if (checkSignUp()){
                 saveNewUser();
-                setMessage({color:"limegreen",msg:"You Signed-up successfully!! Please Log-in to get in your account."});
+                setMessage({color:"green",msg:"You Signed-up successfully!! Please Log-in to get in your account."});
             };
         }else{
             setMessage({color:"red",msg:"Please fill all inputs."});
@@ -28,7 +28,7 @@ export default function useValidSignup(){
 
         setTimeout(() => {
             setMessage({color:"",msg:""});
-        }, 5000)
+        }, 3000)
     };
 
     //check if signup form has valid inputs (return true or false)

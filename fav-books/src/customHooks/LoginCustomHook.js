@@ -9,7 +9,7 @@ export default function useValidLogin(props){
         e.preventDefault();
         if (email && password){
             if (checkLogin()){
-                setMessage({color:"limegreen",msg:"You Loged-in successfully!!"});
+                setMessage({color:"green",msg:"You Loged-in successfully!!"});
             };
         }else{
             setMessage({color:"red",msg:"Please fill all inputs."});
@@ -20,7 +20,7 @@ export default function useValidLogin(props){
 
         setTimeout(() => {
             setMessage({color:"",msg:""});
-        },5000)
+        },3000);
     };
 
 

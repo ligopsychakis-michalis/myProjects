@@ -3,10 +3,10 @@ import Login from './Login';
 import Signin from './Signup';
 import '../../styles/LogOrSign.scss';
 
-function LogOrSign(){
+function LogOrSign({setCurrentUser}){
     return(
         <div className="log-sign">
-            <Login />
+            <Login setCurrentUser={setCurrentUser} />
             <Signin />
         </div>
     );

@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import '../../styles/Navbar.scss';
-import {Link, useParams} from 'react-router-dom';
+import {Link, useParams, useHistory} from 'react-router-dom';
 import {CurrentUser} from '../../App';
 import Message from './Message';
 
@@ -9,6 +9,7 @@ function Navbar(props){
     const [message,setMessage] = useState({color:"", msg:""});
     const currentUser = useContext(CurrentUser);
     const params = useParams();
+    const history = useHistory();
 
     //currentUser can add book to his/her fav-list only from details path.. so I use the params..
     function addBook(){
@@ -27,14 +28,19 @@ function Navbar(props){
 
             localStorage.setItem("allUsers", JSON.stringify(allUsers));
 
-            setMessage({color:"limegreen", msg:"Book added successfully."});
+            setMessage({color:"green", msg:"Book added successfully."});
         }else{
             setMessage({color:"#6494ed", msg:"This Book is already added."});
         };
 
         setTimeout(() => {
             setMessage({color:"", msg:""});
-        }, 3000);
+        }, 2000);
+    };
+
+
+    function removeBook(){
+        //logic to remove book from User (my state and Local Storage!!!!!)
     };
 
 
@@ -63,7 +69,8 @@ function Navbar(props){
                         FAV<i className="fas fa-bookmark"></i> BOOKS
                     </div>
                     {props.path == "details" && currentUser.username ? <button type="button" onClick={addBook} className="add-book">Add to My FAV<i className="fas fa-bookmark"></i> BOOKS</button> : <></> }
-                    <Link to="/"><button><i className="fas fa-long-arrow-alt-left"></i> Back</button></Link>   
+                    {props.path == "fav0details" ? <button type="button" onClick={removeBook} className="remove-book">Remove from My FAV<i className="fas fa-bookmark"></i> BOOKS</button> : <></> }
+                    <button onClick={() => history.goBack()}><i className="fas fa-long-arrow-alt-left"></i> Back</button>   
                 </header>
                 {message.msg ? <Message message={message} /> : <></>}
             </>

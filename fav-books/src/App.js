@@ -14,7 +14,7 @@ import {BrowserRouter ,Switch, Route} from 'react-router-dom';
 import useHandleUrl from './customHooks/AppCustomHook';
 
 //TODOS----------------------------------------------------------------------------
-// fix the route "/my0fav0books" to show all stored books!!!!!!!!
+// Navbar -- todo-> removeBook function!!!!!!!!!!!!!!!!!!
 // user can delete fav-books from fav-list
 // toggle "login signup <--> logout username"
 // toggle path = "/log0sign <--> /my0fav0books"
@@ -52,6 +52,11 @@ function App() {
             <Details />
           </Route> 
 
+          <Route path="/fav0details/:id">
+            <Navbar path="fav0details" currentUser={currentUser} setCurrentUser={setCurrentUser} />
+            <Details />
+          </Route>
+
           <Route path="/login">
             <Navbar path="login" />
             <Login setCurrentUser={setCurrentUser} />
@@ -64,11 +69,11 @@ function App() {
 
           <Route path="/log0sign">
             <Navbar path="log0sign" />
-            <LogOrSign />
+            <LogOrSign setCurrentUser={setCurrentUser} />
           </Route> 
 
           <Route path="/my0fav0books">
-            <Navbar path="my0fav/books" />
+            <Navbar path="my0fav0books" />
             <MyFavBooks />
           </Route> 
 
