@@ -30,7 +30,7 @@ body{
 @media all and (max-width: 380px){ 
     .books-container{
         width: 95%;
-        grid-template-columns: repeat(auto-fill, 100%);
+        grid-template-columns: repeat(auto-fill, 95%);
         grid-gap: 30px 45px;
         margin-top: 50px;
         justify-content: center;
