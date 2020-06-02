@@ -11,12 +11,11 @@ export default function useValidLogin(props){
             if (checkLogin()){
                 setMessage({color:"green",msg:"You Loged-in successfully!!"});
             };
+            setEmail("");
+            setPassword("");
         }else{
             setMessage({color:"red",msg:"Please fill all inputs."});
         };
-        
-        setEmail("");
-        setPassword("");
 
         setTimeout(() => {
             setMessage({color:"",msg:""});

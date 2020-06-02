@@ -17,14 +17,13 @@ export default function useValidSignup(){
                 saveNewUser();
                 setMessage({color:"green",msg:"You Signed-up successfully!! Please Log-in to get in your account."});
             };
+            setUsername("");
+            setEmail("");
+            setPassword("");
+            setConfirm("");
         }else{
             setMessage({color:"red",msg:"Please fill all inputs."});
         };
-        
-        setUsername("");
-        setEmail("");
-        setPassword("");
-        setConfirm("");
 
         setTimeout(() => {
             setMessage({color:"",msg:""});
