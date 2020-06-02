@@ -14,10 +14,7 @@ import {BrowserRouter ,Switch, Route} from 'react-router-dom';
 import useHandleUrl from './customHooks/AppCustomHook';
 
 //TODOS----------------------------------------------------------------------------
-// Navbar -- todo-> removeBook function!!!!!!!!!!!!!!!!!!
-// user can delete fav-books from fav-list
 // toggle "login signup <--> logout username"
-// toggle path = "/log0sign <--> /my0fav0books"
 // fix styles (responsive and more...)
 //TODOS----------------------------------------------------------------------------
 

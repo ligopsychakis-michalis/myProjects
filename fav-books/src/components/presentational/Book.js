@@ -9,17 +9,19 @@ function Book(props){
     const history = useHistory();
     
     useEffect(() => {
+        let newPath = "/details";
         if(history.location.pathname == "/my0fav0books"){
+            newPath = "/fav0details";
             setPath("/fav0details");
         };
     
         if (props.info.volumeInfo.imageLinks){ 
-            setImg(<img onClick={() => history.push(`${path}/${props.info.id}`)} src={props.info.volumeInfo.imageLinks.thumbnail} alt={props.info.volumeInfo.title} />); 
+            setImg(<img onClick={() => history.push(`${newPath}/${props.info.id}`)} src={props.info.volumeInfo.imageLinks.thumbnail} alt={props.info.volumeInfo.title} />); 
         }else{
-            setImg(<img onClick={() => history.push(`${path}/${props.info.id}`)} src={nocover} alt={props.info.volumeInfo.title} />);
+            setImg(<img onClick={() => history.push(`${newPath}/${props.info.id}`)} src={nocover} alt={props.info.volumeInfo.title} />);
         };
     } ,[])
-   
+
 
     return (
         <div className="book">

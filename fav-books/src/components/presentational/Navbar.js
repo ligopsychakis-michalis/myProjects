@@ -1,48 +1,13 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import '../../styles/Navbar.scss';
-import {Link, useParams, useHistory} from 'react-router-dom';
-import {CurrentUser} from '../../App';
+import {Link, useHistory} from 'react-router-dom';
 import Message from './Message';
+import useAddRemoveBook from '../../customHooks/NavbarCustomHook';
 
 
 function Navbar(props){
-    const [message,setMessage] = useState({color:"", msg:""});
-    const currentUser = useContext(CurrentUser);
-    const params = useParams();
     const history = useHistory();
-
-    //currentUser can add book to his/her fav-list only from details path.. so I use the params..
-    function addBook(){
-        if (!currentUser.bookIDs.includes(params.id)){
-            //add book to my state
-            props.setCurrentUser({...props.currentUser, bookIDs: [...currentUser.bookIDs, params.id]});
-            //add book to localStorage
-            let allUsers = JSON.parse(localStorage.getItem("allUsers"));
-            allUsers = allUsers.map(user => {
-                if(user.username == currentUser.username){
-                    return {...user, bookIDs:[...user.bookIDs,params.id]};
-                }else{
-                    return user;
-                };
-            });
-
-            localStorage.setItem("allUsers", JSON.stringify(allUsers));
-
-            setMessage({color:"green", msg:"Book added successfully."});
-        }else{
-            setMessage({color:"#6494ed", msg:"This Book is already added."});
-        };
-
-        setTimeout(() => {
-            setMessage({color:"", msg:""});
-        }, 2000);
-    };
-
-
-    function removeBook(){
-        //logic to remove book from User (my state and Local Storage!!!!!)
-    };
-
+    const [currentUser,addBook,removeBook,message] = useAddRemoveBook(props);
 
     if (props.path == "home"){
         return (
@@ -66,7 +31,7 @@ function Navbar(props){
             <>
                 <header>
                     <div className="logo">
-                        FAV<i className="fas fa-bookmark"></i> BOOKS
+                        {props.path == "my0fav0books" ? <span style={{color:"#faebd7"}}>MY</span> : ""} FAV<i className="fas fa-bookmark"></i> BOOKS
                     </div>
                     {props.path == "details" && currentUser.username ? <button type="button" onClick={addBook} className="add-book">Add to My FAV<i className="fas fa-bookmark"></i> BOOKS</button> : <></> }
                     {props.path == "fav0details" ? <button type="button" onClick={removeBook} className="remove-book">Remove from My FAV<i className="fas fa-bookmark"></i> BOOKS</button> : <></> }
