@@ -41,3 +41,38 @@
         }
     }
 }
+
+
+//responsive
+@media all and (max-width:600px){
+    .signup{
+        margin-top: 50px;
+        img{ 
+            width:500px; 
+            top: -5px;
+        }
+        form div{ margin-bottom: 10px; }
+    }
+}
+
+@media all and (max-width:500px){
+    .signup{
+        margin-top: 65px;
+        img{ 
+            width:400px; 
+            height: 115%;
+            top: -20px;
+        }
+    }
+}
+
+@media all and (max-width:400px){
+    .signup{
+        margin-top: 65px;
+        padding: 0 5%;
+        img{ 
+            width:130%; 
+            height: 130%;
+        }
+    }
+}

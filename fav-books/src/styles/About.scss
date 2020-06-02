@@ -49,5 +49,36 @@
             }
         }
     }
+}
+
+//responsive
+@media all and (max-width: 900px){
+    .about{
+        font-size: 0.8em;
+        .about-text{ margin-right: 20px; }
+
+        img{ 
+            width: 100%; 
+            height: 100%;
+            top:40px;
+        }
     
+        .about-book-content{ 
+            width: 85%; 
+            margin-top: 80px;
+        }
+    }
+}
+
+@media all and (max-width: 500px){
+    .about{
+        .about-book-content{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .random-quotes .quote{ height: inherit; }
+    }
 }

@@ -14,7 +14,6 @@ import {BrowserRouter ,Switch, Route} from 'react-router-dom';
 import useHandleUrl from './customHooks/AppCustomHook';
 
 //TODOS----------------------------------------------------------------------------
-// toggle "login signup <--> logout username"
 // fix styles (responsive and more...)
 //TODOS----------------------------------------------------------------------------
 
@@ -75,7 +74,7 @@ function App() {
           </Route> 
 
           <Route path="/">
-            <Navbar path="home"/>
+            <Navbar path="home" setCurrentUser={setCurrentUser}/>
             <SearchBar
               searchInput={searchInput} 
               handleSearchSubmit={handleSearchSubmit} 

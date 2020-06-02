@@ -41,3 +41,35 @@
         }
     }
 }
+
+//responsive
+@media all and (max-width:600px){
+    .login{
+        margin-top: 100px;
+        img{ 
+            width:500px; 
+            top: -50px;
+        }
+    }
+}
+
+@media all and (max-width:500px){
+    .login{
+        margin-top: 65px;
+        img{ 
+            width:400px; 
+            top: -20px;
+        }
+    }
+}
+
+@media all and (max-width:400px){
+    .login{
+        margin-top: 65px;
+        padding: 0 5%;
+        img{ 
+            width:130%; 
+            height: 130%;
+        }
+    }
+}

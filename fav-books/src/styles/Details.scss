@@ -32,3 +32,19 @@
         a{ font-size: 0.9em; }
     }
 }
+
+//responsive
+@media all and (max-width: 870px){
+    .details{
+        width: 90%;
+        img{ margin-right: 0; }
+    }
+}
+
+@media all and (max-width: 540px){
+    .details{
+        margin-top: 40px;
+        img{ width: 150px; }
+        .description{ margin-top: 20px; }
+    }
+}

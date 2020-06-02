@@ -4,3 +4,19 @@
     margin: auto;
     justify-content: space-between;
 }
+
+//responsive
+@media all and (max-width:900px){
+    .log-sign{
+        flex-direction: column;
+        &div:first-of-type{ margin-bottom: 100px; }
+    }
+}
+
+@media all and (max-width:500px){
+    .log-sign{
+        &div:first-of-type{ margin-bottom: 25px; }
+    }
+}
+
+

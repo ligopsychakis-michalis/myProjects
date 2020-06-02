@@ -1,9 +1,9 @@
 import {useContext, useState} from 'react';
-import {useParams, useHistory} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import {CurrentUser} from '../App';
 
 
-export default function useAddRemoveBook(props){
+export default function useNavbar(props){
     const [message,setMessage] = useState({color:"", msg:""});
     const currentUser = useContext(CurrentUser);
     const params = useParams();
@@ -55,8 +55,17 @@ export default function useAddRemoveBook(props){
         setMessage({color:"green", msg:"Book removed successfully."});
         setTimeout(() => {
             setMessage({color:"", msg:""});
-        }, 1500);
+        }, 2000);
     };
 
-    return [currentUser,addBook,removeBook,message];
+
+    function logOut(){
+        props.setCurrentUser({username:"", bookIDs:[]});
+        setMessage({color:"green", msg:"You Loged-out successfully."});
+        setTimeout(() => {
+            setMessage({color:"", msg:""});
+        }, 2000);
+    };
+
+    return [currentUser,addBook,removeBook,message,logOut];
 }

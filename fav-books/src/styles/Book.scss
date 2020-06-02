@@ -38,3 +38,24 @@
         font-style: italic;
     }
 }
+
+//responsive
+@media all and (max-width: 500px){
+    .book{
+        width: 150px;
+
+        img{
+            width: 150px;
+        }
+    }
+}
+
+@media all and (max-width: 380px){
+    .book{
+        width: -webkit-fill-available;
+
+        img{
+            width: 100%;
+        }
+    }
+}
