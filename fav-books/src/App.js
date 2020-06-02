@@ -84,7 +84,7 @@ function App() {
               setFilter3 = {e => setFilter3(e.target.value)}
             />
             <main className="books-container">
-              {books.length ? books : <NoBooks />}
+              {books.length ? books : <NoBooks data={data} />}
             </main>
           </Route>  
 

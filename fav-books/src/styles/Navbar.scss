@@ -103,7 +103,7 @@ header{
     header{
         ul:first-of-type{ 
             flex-basis: 100%; 
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -115,8 +115,13 @@ header{
             flex-wrap: wrap;
             flex-basis: 100%;
             li{ margin:0; }
-            &:first-of-type{ max-width: 265px; }
-        }    
+            &:first-of-type{ 
+                max-width: 265px; 
+            }
+        }  
+        
+        button{ padding: 10px 25px; }
+        .user-logout{ button{ margin-left: 10px; } }
     }
 }
 
@@ -127,7 +132,6 @@ header{
             
             &:first-of-type{ 
                 justify-content: center; 
-                li{ margin-bottom: 5px; }
             }
         }
 

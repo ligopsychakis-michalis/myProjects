@@ -42,7 +42,7 @@ function Navbar(props){
             <>
                 <header>
                     <div className="logo">
-                        {props.path == "my0fav0books" ? <span style={{color:"#faebd7"}}>MY</span> : ""} FAV<i className="fas fa-bookmark"></i> BOOKS
+                        {(props.path == "my0fav0books" || props.path == "fav0details") ? <span style={{color:"#faebd7"}}>MY</span> : ""} FAV<i className="fas fa-bookmark"></i> BOOKS
                     </div>
                     {props.path == "details" && currentUser.username ? <button type="button" onClick={addBook} className="add-book">Add to My FAV<i className="fas fa-bookmark"></i> BOOKS</button> : <></> }
                     {props.path == "fav0details" ? <button type="button" onClick={removeBook} className="remove-book">Remove from My FAV<i className="fas fa-bookmark"></i> BOOKS</button> : <></> }

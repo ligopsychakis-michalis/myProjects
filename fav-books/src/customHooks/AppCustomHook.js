@@ -11,9 +11,13 @@ export default function useHandleUrl(){
   
     //new fetch every time data changes
     useEffect(() => {
+        setData(null);
         fetch(url)
-          .then(res => res.json())
-          .then(data => setData(data.items));
+            .then(res => res.json())
+            .then(data => { 
+                if (data.items) setData(data.items)
+                else setData([]); 
+            });
     }, [url]);
     
     //new url every time radio buttons changes
