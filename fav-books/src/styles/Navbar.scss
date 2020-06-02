@@ -127,7 +127,7 @@ header{
 
 @media all and (max-width: 425px){
     header{
-        .remove-book{ margin-bottom: 10px; }
+        .remove-book, .add-book{ margin-bottom: 10px; }
     }
 }
 
