@@ -1,5 +1,5 @@
 //import the access token for shorten links api
-import { ACCESS_KEY } from "./token.js";
+import { ACCESS_KEY } from "./config.js";
 
 //render to dom saved shorten links if exist
 let storedLinks = (JSON.parse(localStorage.getItem("locaLinks")));
