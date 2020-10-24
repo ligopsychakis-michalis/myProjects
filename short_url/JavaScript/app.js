@@ -1,3 +1,6 @@
+//import the access token for shorten links api
+import { ACCESS_KEY } from "./token.js";
+
 //render to dom saved shorten links if exist
 let storedLinks = (JSON.parse(localStorage.getItem("locaLinks")));
 
@@ -19,26 +22,40 @@ import {ShortLinks} from "./classLinks.js";
 //Event - when typing to input show "https://" as standard
 const input = document.querySelector(".short-links input");
 input.addEventListener("focus", () => {
-    input.value = "https://";
+    if (input.value === ""){
+        input.value = "https://";
+    }
 });
 
 
 //Event - when 'Shorten it!' button clicked, make api call, create a class ShortLinks instance and render to DOM
 const shortenIt = document.querySelector(".short-links button");
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+})
 
 shortenIt.addEventListener("click", () => {
     async function inputHandle(){
-        const res = await fetch("https://rel.ink/api/links/", {
+        const res = await fetch("https://api-ssl.bitly.com/v4/shorten", {
             method:"POST",
-            body: JSON.stringify( {url: `${input.value}`} ),
-            headers: { 'Content-Type': 'application/json' }
+            body: JSON.stringify( {
+                long_url: `${input.value}`, 
+                domain: "bit.ly" 
+            }),
+            headers: { 
+                'Content-Type': 'application/json',  
+                'Authorization': `Bearer ${ACCESS_KEY}`
+            }
         });
-
-        if (res.status > 200 && res.status < 400){
+        
+        if (res.status >= 200 && res.status < 400){
             const data = await res.json();
 
-            storedLinks.push(new ShortLinks(input.value, `https://rel.ink/${data.hashid}`));
+            storedLinks.push(new ShortLinks(input.value, data.link));
             input.value = "";
+            input.blur();
 
             //save to localStorage
             localStorage.setItem("locaLinks", JSON.stringify(storedLinks));
@@ -80,7 +97,6 @@ document.querySelector(".short-links").addEventListener("click", (e) => {
         const copyButtons = document.querySelectorAll(".short-links div button");
         
         for (let i = 0; i < copyButtons.length; i++){
-            console.log(copyButtons[i]);
             copyButtons[i].style.backgroundColor = "hsl(180, 66%, 49%)";
             copyButtons[i].innerText = "Copy";
         }
