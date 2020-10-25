@@ -1,6 +1,3 @@
-//import the access token for shorten links api
-import { ACCESS_KEY } from "./config.js";
-
 //render to dom saved shorten links if exist
 let storedLinks = (JSON.parse(localStorage.getItem("locaLinks")));
 
@@ -46,7 +43,7 @@ shortenIt.addEventListener("click", () => {
             }),
             headers: { 
                 'Content-Type': 'application/json',  
-                'Authorization': `Bearer ${ACCESS_KEY}`
+                'Authorization': 'Bearer 3b519f065dc41b3efe0587032bf2c5a8ff2d5d76'
             }
         });
         
