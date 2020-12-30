@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sockets Chat</title>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="chat">
+        <div id="chat-area"></div>
+        <div id="chat-feedback"></div>
+        <form>
+            <input id="chat-name" type="text" placeholder="Your Name" />
+            <br />
+            <input id="chat-text" type="text" placeholder="chat here..." />
+            <br />
+            <button id="chat-send">SEND</button>
+        </form>
+    </div>
+    
+    <script src="./chat.js"></script>
+</body>
+</html>

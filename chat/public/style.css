@@ -1,0 +1,49 @@
+#chat {
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-area {
+    width: 100%;
+    max-height: 80%;
+    overflow-y: overlay;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#chat-name, #chat-text, #chat-send {
+    width: 100%;
+    margin: 2px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#chat-feedback {
+    flex: 1;
+}
+
+@media all and (max-width: 750px) {
+    #chat {
+        width: 95%;
+        height: 70vh;
+    }
+
+    #chat-name, #chat-text, #chat-send {
+        width: 99%;
+    }
+
+    form {
+        width: 100%;
+    }    
+}
+
+
