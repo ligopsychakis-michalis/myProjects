@@ -1,17 +1,14 @@
 const express = require('express');
-
-
 const app = express();
 
 app.use(express.static('public'));
 
-const server = app.listen(8080, () => console.log('Server listen on port 8080...'));
+const PORT = process.env.PORT || 8080;
+const server = app.listen(PORT);
 
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
-    console.log('client connected...');
-
     socket.on('chat', data => {
         if (data.name) {
             io.emit('chatToAll', data);

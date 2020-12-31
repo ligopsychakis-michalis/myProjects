@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8080/');
+const socket = io('https://my-chat123.herokuapp.com/');
 
 const chatArea = document.getElementById('chat-area');
 const chatSend = document.getElementById('chat-send');
@@ -22,6 +22,7 @@ chatText.addEventListener('keypress', () => {
 })
 
 socket.on('chatToAll', data => {
+    if (chatArea.innerHTML) chatArea.innerHTML += '<hr/>';
     chatArea.innerHTML += `<p><strong>${data.name}:</strong> ${data.msg}</p>`;
     chatFeedback.innerHTML = '';
 });
