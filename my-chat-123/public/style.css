@@ -2,17 +2,24 @@ body {
     font-size: 1.2em;
     font-family: system-ui, sans-serif;
     letter-spacing: 0.01em;
+    background-image: url('https://i.pinimg.com/originals/85/70/f6/8570f6339d3189c96e340d47a581d3b8.jpg');
+    background-color: #fd974f;
+    color: #494541;
 }
+
+
 
 #chat {
     width: 700px;
-    height: 700px;
-    border: 1px solid black;
+    height: 80vh;
+    border: 10px outset #a9a298;
     margin: auto;
     margin-top: 8vh;
     display: flex;
     flex-direction: column;
     padding: 0 20px;
+    border-radius: 20px;
+    background-color: rgba(252,249,244,0.75);
 }
 
 #chat-area {
@@ -39,20 +46,26 @@ form {
     font-size: 1em;
     font-family: system-ui, sans-serif;
     letter-spacing: 0.01em;
+    color: #494541;
+}
+
+#chat-send {
+    font-weight: bold;
+    outline: none;
+    background-color: #f0f0ef;
 }
 
 #chat-feedback {
     flex: 1;
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 780px) {
     body {
         font-size: 1em;
     }
     
     #chat {
-        width: 95%;
-        height: 70vh;
+        width: auto;
     }
 
     #chat-name, #chat-text, #chat-send {

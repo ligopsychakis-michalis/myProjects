@@ -24,4 +24,8 @@ io.on('connection', socket => {
             socket.broadcast.emit('writingToAll', 'guest');
         }
     });
+
+    socket.on('writingStop', () => {
+        io.emit('writingStopToAll');
+    });
 }); 
