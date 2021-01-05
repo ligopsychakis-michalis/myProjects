@@ -1,28 +1,25 @@
 const express = require('express');
 const app = express();
 
-app.use(express.static('public'));
-
+//create server
 const PORT = process.env.PORT || 8080;
 const server = app.listen(PORT);
 
+//serve the site
+app.use(express.static('public'));
+
+//call socket.io package
 const io = require('socket.io')(server);
 
+//event for web-socket connection
 io.on('connection', socket => {
+    console.log('user connected');
     socket.on('chat', data => {
-        if (data.name) {
-            io.emit('chatToAll', data);
-        } else {
-            io.emit('chatToAll', {...data, name:'guest'});
-        }
+        io.emit('chatToAll', data);
     });
 
     socket.on('writing', data => {
-        if (data) {
-            socket.broadcast.emit('writingToAll', data);
-        } else {
-            socket.broadcast.emit('writingToAll', 'guest');
-        }
+        socket.broadcast.emit('writingToAll', data);
     });
 
     socket.on('writingStop', () => {

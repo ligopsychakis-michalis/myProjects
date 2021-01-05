@@ -12,14 +12,24 @@
         <div id="chat-area"></div>
         <div id="chat-feedback"></div>
         <form>
-            <input id="chat-name" type="text" placeholder="Your Name" />
-            <br />
+            <p id="user-name"></p>
             <input id="chat-text" type="text" placeholder="chat here..." />
             <br />
             <button id="chat-send">SEND</button>
         </form>
     </div>
-    
+
+    <div id="users"></div>
+
+    <div id="modal" class="active">
+        <form>
+            <label for="name">What's your name?</label> <br/>
+            <input id="name" name="name" type="text" placeholder="Your Name"/> <br/>
+            <button>Start Chating</button>
+            <p id="error"></p>
+        </form>
+    </div>
+    <div id="overlay" class="active"></div>
     <script src="./chat.js"></script>
 </body>
 </html>
