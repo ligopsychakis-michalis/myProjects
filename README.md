@@ -21,3 +21,5 @@ Frontend_Mentor4: https://ligopsychakis-michalis.github.io/myProjects/clipboard
 Frontend_Mentor5: https://ligopsychakis-michalis.github.io/myProjects/easybank
 
 My_Chat: https://my-chat123.herokuapp.com/
+
+Ninjas_List: https://ninja-sigma.vercel.app/ninjas
