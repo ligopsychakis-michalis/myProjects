@@ -2,18 +2,18 @@ import Head from 'next/head';
 import styles from '../../styles/Ninjas.module.css';
 
 export async function getStaticPaths () {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const res = await fetch('http://ninjalist-sigma.vercel.app/api/ninjas');
     const data = await res.json();
-    const paths = data.map(d => ({ params: { id: d.id.toString() } }));
+    const paths = data.ninjas.map(d => ({ params: { id: d.id.toString() } }));
 
     return { paths, fallback: false };
 }
 
 export async function getStaticProps ({ params }) {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+    const res = await fetch(`http://ninjalist-sigma.vercel.app/api/ninjas/${params.id}`);
     const data = await res.json();
 
-    return { props: { ninja: data } };
+    return { props: { ninja: data.ninja } };
 }
 
 function Ninja ({ ninja }) {
