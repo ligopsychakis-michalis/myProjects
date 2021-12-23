@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from '../../styles/Ninjas.module.css';
 
 export async function getStaticProps () {
-    const res = await fetch('http://ninjalist-sigma.vercel.app/api/ninjas');
+    const res = await fetch('http://ninja-sigma.vercel.app/api/ninjas');
     const data = await res.json();
 
     return { props: { ninjas: data.ninjas } };
