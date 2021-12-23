@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from '../../styles/Ninjas.module.css';
 
-export async function getStaticProps () {
+export async function getServerSideProps () {
     const res = await fetch('http://ninja-sigma.vercel.app/api/ninjas');
     const data = await res.json();
 
