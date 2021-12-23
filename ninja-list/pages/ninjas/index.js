@@ -3,10 +3,10 @@ import Link from "next/link";
 import styles from '../../styles/Ninjas.module.css';
 
 export async function getStaticProps () {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const res = await fetch('http://ninjalist-sigma.vercel.app/api/ninjas');
     const data = await res.json();
 
-    return { props: { ninjas: data } };
+    return { props: { ninjas: data.ninjas } };
 }
 
 function Ninjas ({ ninjas }) {
