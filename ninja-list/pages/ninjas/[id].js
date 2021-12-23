@@ -1,15 +1,7 @@
 import Head from 'next/head';
 import styles from '../../styles/Ninjas.module.css';
 
-export async function getStaticPaths () {
-    const res = await fetch('http://ninja-sigma.vercel.app/api/ninjas');
-    const data = await res.json();
-    const paths = data.ninjas.map(d => ({ params: { id: d.id.toString() } }));
-
-    return { paths, fallback: false };
-}
-
-export async function getStaticProps ({ params }) {
+export async function getServerSideProps ({ params }) {
     const res = await fetch(`http://ninja-sigma.vercel.app/api/ninjas/${params.id}`);
     const data = await res.json();
 
