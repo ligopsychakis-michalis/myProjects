@@ -1,0 +1,14 @@
+<div class="notebook">
+    <div *ngIf="note">
+        <div class="title">
+            <img [src]="note.hot ? '../../assets/hot.jpeg' : '../../assets/cold.jpeg'" alt="priority">
+            <h3>{{note.title}}</h3>
+        </div>
+        <p id="description">{{note.description}}</p>
+    </div>
+
+    <div *ngIf="!note">
+        <h2 class="error">Error</h2>
+        <h3 class="error">There is no such note on your porofile!</h3>
+    </div>
+</div>

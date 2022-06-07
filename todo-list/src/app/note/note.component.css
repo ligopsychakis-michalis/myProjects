@@ -1,0 +1,22 @@
+.error {
+    color: red;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    bottom: 8px;
+}
+
+#description {
+    position: relative;
+    top: 15px
+}

@@ -1,0 +1,24 @@
+.tabs {
+    text-align: left;
+    position: relative;
+    bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.tabs a {
+    background-color: white;
+    padding: 6px 12px;
+    margin-right: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #222424;
+}
+
+.tabs a:hover {
+    background-color: #22242490;
+    color: skyblue;
+}
+
+.active {
+    border: 1px solid skyblue;
+}

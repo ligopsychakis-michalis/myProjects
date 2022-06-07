@@ -1,0 +1,45 @@
+<div class="notebook">
+    <form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+        <div class="input">
+            <label for="title">Title:</label>
+            <input required type="text" id="title" formControlName="title" />
+        </div>
+
+        <div class="input descriptionInput">
+            <label for="description">Description:</label>
+            <input required type="text" id="description" formControlName="description" />
+        </div>
+
+        <br />
+
+        <div class="input">
+            <label for="hot">High priority:</label>
+            <input type="checkbox" id="hot" formControlName="hot" />
+        </div>
+
+        <button
+            [ngClass]="{disabled: !noteForm.valid || !noteForm.value.description.trim()}" 
+            [disabled]="!noteForm.valid || !noteForm.value.description.trim()" 
+            id="submit" 
+            type="submit"
+        >
+            Add Note
+        </button>
+    </form>
+    
+    <button 
+        id="generate"
+        (click)="onGenerate()" 
+    >
+        Eat Random Food
+    </button>
+
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <app-note-card 
+            *ngFor="let note of notes" 
+            [note]="note"
+            (edit)="onEdit($event)"
+            (delete)="onDelete($event)"
+        ></app-note-card>
+    </div>
+</div>

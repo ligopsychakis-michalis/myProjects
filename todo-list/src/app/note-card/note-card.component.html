@@ -1,0 +1,11 @@
+<div class="note" *ngIf="note" cdkDrag>
+    <div class="actions">
+        <div class="opacity"></div>
+        <a [routerLink]="'/note/' + note.id"><img id="view" src="../../assets/view.png" alt="view"></a>
+        <img id="edit" (click)="onEdit()" src="../../assets/edit.png" alt="edit">
+        <img id="delete" (click)="onDelete()" src="../../assets/delete.png" alt="delete">
+    </div>
+
+    <img [src]="note.hot ? '../../assets/hot.jpeg' : '../../assets/cold.jpeg'" alt="priority">
+    <p>{{ note.title }}</p>
+</div>

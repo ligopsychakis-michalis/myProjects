@@ -1,0 +1,55 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #222424;
+    color: #222424;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.notebook {
+    background-color: whitesmoke;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 30px 50px 50px 50px;
+}
+
+button {
+    width: 100%;
+    font-size: 16px;
+    padding: 9px 0;
+    background-color: skyblue;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+button:hover {
+    color: #222424;
+    cursor: pointer;
+}
+
+.disabled:hover {
+    color: whitesmoke;
+    cursor: auto;
+}
+
+.disabled {
+    opacity: 0.34;
+}
+
+input {
+    color: #222424;
+}
+
+a, p, span, div, input, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

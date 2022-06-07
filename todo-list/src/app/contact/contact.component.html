@@ -1,0 +1,18 @@
+<div class="notebook">
+    <p>Give us your name and email in order to reach you ...</p>
+    <br />
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="input name">
+            <label for="name">Name: </label>
+            <input required id="name" type="text" formControlName="name" />
+        </div>
+
+        <div class="input email">
+            <label for="email">Email: </label>
+            <input required id="email" type="text" formControlName="email" />
+        </div>
+
+        <br /><br />
+        <button [ngClass]="{'disabled': !contactForm.valid}" [disabled]="!contactForm.valid" type="submit">Send</button>
+    </form>
+</div>

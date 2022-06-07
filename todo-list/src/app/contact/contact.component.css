@@ -1,0 +1,22 @@
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 280px;
+    margin: auto;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px;
+    width: 200px;
+    outline-color: #222424;
+}
+
+button {
+    width: 280px;
+}

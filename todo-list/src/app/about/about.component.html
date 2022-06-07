@@ -1,0 +1,8 @@
+<div class="notebook">
+    <div class="tabs" >
+        <a [ngClass]="{ 'active': activeTab === 'about1' }" routerLink="about1">About 1</a>
+        <a [ngClass]="{ 'active': activeTab === 'about2' }" routerLink="about2">About 2</a>
+        <a [ngClass]="{ 'active': activeTab === 'about3' }" routerLink="about3">About 3</a>
+    </div>
+    <router-outlet></router-outlet>
+</div>

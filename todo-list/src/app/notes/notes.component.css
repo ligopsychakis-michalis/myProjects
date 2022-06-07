@@ -1,0 +1,51 @@
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px;
+    outline-color: #222424;
+}
+
+label {
+    width: 130px;
+    text-align: left;
+}
+
+#hot {
+    width: 26px;
+    height: 26px;
+    margin-right: auto;
+    position: relative;
+    right: 3px;
+}
+
+#hot:checked {
+    accent-color: #222424;
+}
+
+#title {
+    flex: 1;
+}
+
+#description {
+    flex: 1;
+}
+
+.descriptionInput {
+    margin-top: 10px;
+    margin-bottom: -8px;
+}
+
+#submit {
+    margin-top: 26px;
+}
+
+#generate {
+    margin-top: 10px;
+    background-color: #22242495;
+}  

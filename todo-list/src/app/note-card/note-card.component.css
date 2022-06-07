@@ -1,0 +1,100 @@
+.note {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: -20px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    cursor: move;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 1px -2px rgba(34, 36, 36, 0.2),
+        0 2px 2px 0 rgba(34, 36, 36, 0.14),
+        0 1px 5px 0 rgba(34, 36, 36, 0.12);
+}
+  
+.note:active {
+    box-shadow: 0 5px 5px -3px rgba(34, 36, 36, 0.2),
+        0 8px 10px 1px rgba(34, 36, 36, 0.14),
+        0 3px 14px 2px rgba(34, 36, 36, 0.12);
+}
+
+.note .actions img:hover {
+    cursor: pointer;
+}
+
+.note:hover .actions .opacity {
+    opacity: 0.65;
+}
+
+.note:hover .actions img {
+    opacity: 0.8;
+}
+
+.note .actions { 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note .actions .opacity {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    background-color: #222424;
+    opacity: 0;
+}
+
+.note .actions img {
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+    opacity: 0;
+}
+
+.note:nth-of-type(1) {
+    margin-top: 40px;
+}
+
+#view {
+    width: 25px;
+    height: 25px;
+    border: 4px solid black;
+    border-radius: 100%;
+    padding: 5.5px;
+    margin-right: 6px;
+    position: relative;
+    top: 2px;
+}
+
+#edit {
+    width: 25px;
+    height: 25px;
+    border: 4px solid black;
+    border-radius: 100%;
+    padding: 5.5px;
+    margin-right: 6px;
+}
+
+.note img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.note p {
+    word-break: break-all;
+    white-space: normal;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}

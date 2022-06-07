@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Edit Note</h1>
+<form [formGroup]="noteForm" (ngSubmit)="onDone()">
+    <div id="title">
+        <label for="title">Title: </label>
+        <input required type="text" formControlName="title">
+    </div>
+    
+    <div id="description">
+        <label for="title">Description: </label>
+        <input required type="text" formControlName="description">
+    </div>
+    
+    <div id="hot">
+        <label for="title">High priority: </label>
+        <input type="checkbox" formControlName="hot">
+    </div>
+
+    <div id="actions" mat-dialog-actions>
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button [disabled]="!noteForm.valid" [ngClass]="{ 'disabled': !noteForm.valid }" mat-button type="submit">Done</button>
+    </div>
+</form>
