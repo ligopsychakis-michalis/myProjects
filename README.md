@@ -23,3 +23,5 @@ Frontend_Mentor5: https://ligopsychakis-michalis.github.io/myProjects/easybank
 My_Chat: https://my-chat123.herokuapp.com/
 
 Ninjas_List: https://ninja-sigma.vercel.app/
+
+Todo_List: https://stupendous-mochi-bca6b4.netlify.app/
