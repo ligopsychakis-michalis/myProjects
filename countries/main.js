@@ -18,7 +18,7 @@ window.onload = () => {
         document.querySelector("main").innerHTML = "";
         try{
 
-            const res = await fetch(url);
+            const res = await fetch(`${url}?access_key=8c580ba2cd926d5799d7b479f2dd0f39`);
             const data = await res.json();
 
             data.forEach(country => {
