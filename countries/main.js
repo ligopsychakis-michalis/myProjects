@@ -67,7 +67,7 @@ window.onload = () => {
         }       
     }
 
-    displayCountries("http://api.countrylayer.com/v2/all");
+    displayCountries("https://restcountries.com/v2/all");
 
 
     //listener for filter countries by region
