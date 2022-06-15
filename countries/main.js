@@ -18,7 +18,7 @@ window.onload = () => {
         document.querySelector("main").innerHTML = "";
         try{
 
-            const res = await fetch(`${url}?access_key=8c580ba2cd926d5799d7b479f2dd0f39`);
+            const res = await fetch(url);
             const data = await res.json();
 
             data.forEach(country => {
@@ -67,16 +67,16 @@ window.onload = () => {
         }       
     }
 
-    displayCountries("https://restcountries.eu/rest/v2/all");
+    displayCountries("http://api.countrylayer.com/v2/all");
 
 
     //listener for filter countries by region
     const region = document.querySelector(".region");
     region.addEventListener("change", () => {
         if (region.value === ""){
-            displayCountries("https://restcountries.eu/rest/v2/all");
+            displayCountries("https://restcountries.com/v2/all");
         }else{
-            displayCountries(`https://restcountries.eu/rest/v2/region/${region.value.toLowerCase()}`);
+            displayCountries(`https://restcountries.com/v2/region/${region.value.toLowerCase()}`);
         }
     });
 
@@ -85,11 +85,11 @@ window.onload = () => {
     const search = document.querySelector(".search");
     search.addEventListener("change", () => {
         if (search.value === "" && region.value != ""){
-            displayCountries(`https://restcountries.eu/rest/v2/region/${region.value.toLowerCase()}`);
+            displayCountries(`https://restcountries.com/v2/region/${region.value.toLowerCase()}`);
         }else if(search.value === "" && region.value === ""){
             displayCountries("https://restcountries.eu/rest/v2/all");
         }else{
-            displayCountries(`https://restcountries.eu/rest/v2/name/${search.value.toLowerCase()}`);
+            displayCountries(`https://restcountries.com/v2/name/${search.value.toLowerCase()}`);
         }
     });
 
