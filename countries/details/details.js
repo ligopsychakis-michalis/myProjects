@@ -88,7 +88,7 @@ window.onload = () => {
             let borders = arr.reduce((acc, item) => acc + item + ";" ,"");
             borders = borders.slice(0,borders.length - 1);
             
-            const res = await fetch(`https://restcountries.eu/rest/v2/alpha?codes=${borders}`);
+            const res = await fetch(`https://restcountries.com/v2/alpha?codes=${borders}`);
             const data = await res.json(); 
 
             let buttons = "";
@@ -115,7 +115,7 @@ window.onload = () => {
     function clickBorder(){
         document.querySelectorAll(".borders button").forEach(btn => {
             btn.addEventListener("click", (e) => {
-                fetch(`https://restcountries.eu/rest/v2/name/${e.target.innerText}`)
+                fetch(`https://restcountries.com/v2/name/${e.target.innerText}`)
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
