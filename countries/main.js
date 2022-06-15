@@ -87,7 +87,7 @@ window.onload = () => {
         if (search.value === "" && region.value != ""){
             displayCountries(`https://restcountries.com/v2/region/${region.value.toLowerCase()}`);
         }else if(search.value === "" && region.value === ""){
-            displayCountries("https://restcountries.eu/rest/v2/all");
+            displayCountries("https://restcountries.com/v2/all");
         }else{
             displayCountries(`https://restcountries.com/v2/name/${search.value.toLowerCase()}`);
         }
