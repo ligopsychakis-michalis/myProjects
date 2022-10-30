@@ -27,3 +27,5 @@ Ninjas_List: https://ninja-sigma.vercel.app/
 Todo_List: https://stupendous-mochi-bca6b4.netlify.app/
 
 Three_JS_1: https://ligopsychakis-michalis.github.io/myProjects/threejs_1
+
+Three_JS_2: https://ligopsychakis-michalis.github.io/myProjects/threejs_2
