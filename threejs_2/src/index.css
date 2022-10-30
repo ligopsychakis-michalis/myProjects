@@ -1,0 +1,25 @@
+body {
+    cursor: grab;
+}
+
+.parts {
+    position: absolute;
+    background-color: aliceblue;
+    bottom: 0;
+    left: 0;
+}
+
+.parts-group {
+    width: 200px;
+    display: flex;
+}
+
+.parts-group div {
+    flex: 1;
+    text-align: center;
+    border: 1px solid silver; 
+}
+
+.parts-group div:hover {
+    cursor: pointer;
+}
